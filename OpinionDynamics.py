@@ -97,3 +97,20 @@ def AB_layer_compromise_function(a, b):  # A-B layer  중에서 opposite orienta
         a = a
         b = b
     return a, b
+
+def A_layer_dynamics() :    # A_layer 다이내믹스, 감마 적용 및 설득/타협 알고리즘 적용
+    for i, j in sorted(A_edges.edges()) :
+        if A[i] * A[j] > 0 :
+            A[i] = A_layer_persuasion_function(A[i], A[j])[0]
+            A[j] = A_layer_persuasion_function(A[i], A[j])[1]
+        elif A[i] * A[j] < 0 :
+            A[i] = A_layer_compromise_function(A[i], A[j])[0]
+            A[j] = A_layer_compromise_function(A[i], A[j])[1]
+    for i, j in sorted(AB_edges) :    
+        if A[j] * B[i] > 0 :
+            A[j] = AB_layer_persuasion_function(A[j], B[i])[0]
+            B[i] = AB_layer_persuasion_function(A[j], B[i])[1]
+        elif A[j] * B[i] < 0 :
+            A[j] = AB_layer_compromise_function(A[j], B[i])[0]
+            B[i] = AB_layer_compromise_function(A[j], B[i])[1]
+    return A, prob_p, prob_q

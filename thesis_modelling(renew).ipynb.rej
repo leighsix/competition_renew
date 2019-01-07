@@ -1,0 +1,12 @@
+diff a/thesis_modelling(renew).ipynb b/thesis_modelling(renew).ipynb	(rejected hunks)
+@@ -20,7 +20,9 @@
+     "import numpy as np        \n",
+     "from matplotlib import cm\n",
+     "import pylab\n",
+-    "import time"
++    "import time\n",
++    "import MySQLdb\n",
++    "import sqlite3"
+    ]
+   },
+   {
