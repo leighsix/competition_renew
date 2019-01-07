@@ -3,20 +3,14 @@ from sympy import *
 import numpy as np
 import OpinionDynamics
 import DecisionDynamics
-import Visualization
-import MakingDB
-import Modeling
-
-Modeling
 
 
-class Competition:
+class InterconnectedDynamics:
     def __init__(self):
-        self.modeling = Modeling.Modeling()
-        self.opinion_dynamics = OpinionDynamics.OpinionDynamics()
-        self.decision_dynamics = DecisionDynamics.DecisionDynamics()
-        self.visualization = Visualization.Visualization()
-        self.makingDB = MakingDB.MakingDB()
+        self.steps =
+
+
+    def interconnected_dynamics():
 
 
 

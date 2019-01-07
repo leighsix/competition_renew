@@ -1,3 +1,4 @@
+
 class Setting_Simulation_Value :
     def __init__(self):
         self.A_state = [1, 2]
@@ -10,7 +11,7 @@ class Setting_Simulation_Value :
         self.B_node = 2048
         self.B_edge = 5
         self.inter_edges = 1
-        self.B_network = 1
+        self.B_network = 1        # network : 1 = random regular graph   2 = barabasi-albert graph
         self.gap = 41
         self.Repeating_number = 100
         self.Limited_step = 30

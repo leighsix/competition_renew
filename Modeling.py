@@ -8,11 +8,9 @@ import Setting_Simulation_Value
 
 class Modeling:
     def __init__(self):
-        self.A = Layer_A_Modeling.Layer_A_Modeling()
-        self.B = Layer_B_Modeling.Layer_B_Modeling()
+        self.A = Layer_A_Modeling.Layer_A_Modeling()                  ## A layer 첫번째 인스턴스
+        self.B = Layer_B_Modeling.Layer_B_Modeling()                  ## B layer 첫번째 인스턴스
         self.SS = Setting_Simulation_Value.Setting_Simulation_Value()
-        self.Repeating_number = self.SS.Repeating_number
-        self.Limited_step = self.SS.Limited_step
         self.AB_edges = self.making_interconnected_edges()[0]
         self.AB_neighbor = self.making_interconnected_edges()[1]
         self.R = self.simulation_condition(self.SS.gap)[0]
